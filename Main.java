@@ -94,7 +94,6 @@ public class Main {
 
             }
 
-
             if (number == menu_points) {
                 System.out.println("Выводим ноутбуки, соответствующие выбранным критериям:");
             } else {
@@ -188,10 +187,8 @@ public class Main {
     static Set<Notebook> findByStock(String stock, Set<Notebook> notebooks) {
         Set<Notebook> res = new HashSet<>();
         boolean in_stock = !stock.equalsIgnoreCase("true");
-        System.out.println(in_stock);
 
         for (Notebook notebook : notebooks) {
-            System.out.println(notebook.in_stock);
             if (notebook.in_stock == in_stock) {
                 res.add(notebook);
             }
@@ -237,7 +234,6 @@ public class Main {
     public static int input_number(int start, int end) {
         int number = 0;
         boolean Valid = false;
-
 
         while (!Valid) {
             try {
